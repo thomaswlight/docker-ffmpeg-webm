@@ -13,5 +13,5 @@ COPY copy_output.sh /tmp/workdir
 
 RUN chmod +x ./copy_output.sh
 
-ENTRYPOINT ffmpeg -i ${INPUT_VIDEO_FILE_URL} -vcodec libvpx -deadline realtime -y ${OUTPUT_FILE_NAME} && ./copy_output.sh
+ENTRYPOINT ffmpeg -i ${INPUT_VIDEO_FILE_URL} -y ${OUTPUT_FILE_NAME} && ./copy_output.sh
 #AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY
